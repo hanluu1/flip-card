@@ -20,4 +20,4 @@ The following **required** functionality is completed:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented required features:
-<img src="public/flipcard-walkthru.gif" title="walk through" width=500 alt="video walk through"/>
+<img src="public/Flashcardwalkthru.gif" title="walk through" width=500 alt="video walk through"/>
