@@ -8,9 +8,10 @@ h1,h3{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 600px;
-  height: 400px;
+  width: 800px;
+  height: 500px;
   perspective: 1000px;
+  margin: 0 auto;
   position: relative;
 }
 
@@ -24,13 +25,14 @@ h1,h3{
   justify-content: center;
   align-items: center;
   font-size: 24px;
-  
   border-radius: 10px;
 }
 
 .card-front {
   background-color:rgb(243, 247, 251);
   color: black;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .card-back {
@@ -67,4 +69,13 @@ button {
 
 button:hover {
   background-color: #f0f0f0;
+}
+input {
+  width: 80%;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 10px;
 }
