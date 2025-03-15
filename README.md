@@ -1,4 +1,4 @@
-# Web Development Project 2 - *Card Flip*
+# Web Development Project 2-3 - *Card Flip*
 
 Submitted by: **Han Luu**
 
