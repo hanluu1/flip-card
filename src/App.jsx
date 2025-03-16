@@ -6,7 +6,11 @@ import questionTrivia from "./data/Questtrivia.json";
 const App = () => {
   return (
     <div className="App">
-      <h1>Hi Future Programers!!</h1>
+      <div className="header">
+        <img src="src/assets/icon.webp" alt="icon" width={150} height={150} />
+        <h1>Hi Future Developers!!</h1>
+      </div>
+      
       <h3>I bet you know about these ^^</h3>
       <Card cardsData={questionTrivia.questions}/>
     </div>

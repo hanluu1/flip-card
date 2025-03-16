@@ -1,18 +1,40 @@
 .header {
-  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
 }
-h1,h3{
-  color:white;
+
+h1 {
+  color: white;
+  font-size: 54px;
 }
+
+h3 {
+  color: white;
+  font-size: 24px;
+  margin: 0 auto;
+}
+
+h4 {
+  color: white;
+}
+
+p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: white;
+}
+
 .card {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 800px;
-  height: 500px;
+  width: 600px; /* Fixed width */
+  height: 300px; /* Fixed height */
   perspective: 1000px;
-  margin: 0 auto;
   position: relative;
+  padding: 20px;
 }
 
 .card div {
@@ -22,23 +44,25 @@ h1,h3{
   backface-visibility: hidden;
   transition: transform 0.6s;
   display: flex;
+  flex-direction: column; /* Ensure content is stacked vertically */
   justify-content: center;
   align-items: center;
   font-size: 24px;
+  padding: 10px; /* Add padding for spacing */
+  box-sizing: border-box; /* Include padding in the element's total width and height */
   border-radius: 10px;
+  border: 3px solid black;
 }
 
 .card-front {
-  background-color:rgb(243, 247, 251);
+  background-color:#a8a8a8;
   color: black;
-  flex-direction: column;
-  gap: 5px;
 }
 
 .card-back {
-  background-color:rgb(70, 71, 77);
+  background-color:#a8a8a8;
   transform: rotateY(180deg);
-  color:white;
+  color: white;
 }
 
 .card.flipped .card-front {
@@ -51,31 +75,44 @@ h1,h3{
 
 .buttons {
   display: flex;
-  gap: 10px;
   justify-content: center;
-  content-align: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 button {
- 
   padding: 10px 20px;
   border: none;
-  background-color: white;
+  background-color:#625d5d;
+  color: white;
   cursor: pointer;
   font-size: 16px;
   border-radius: 5px;
-  margin-top: 1rem;
+  
 }
 
 button:hover {
-  background-color: #f0f0f0;
+  background-color:rgb(28, 26, 26);
 }
-input {
-  width: 80%;
+
+.input-container {
+  display: flex;
+  align-items: center;
+  background-color: rgb(140, 140, 140);
   padding: 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+  gap: 10px;
+
+}
+
+input {
+  width: 100%;
+  padding: 8px;
   border: 2px solid #ccc;
   border-radius: 5px;
   font-size: 16px;
   text-align: center;
-  margin-top: 10px;
 }
