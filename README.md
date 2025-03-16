@@ -24,4 +24,4 @@ The following **required** functionality for version 2 is completed:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented required features:
-<img src="public/ver2flip.gif" title="walk through" width=500 alt="video walk through"/>
+<img src="public/ver2flash.gif" title="walk through" width=500 alt="video walk through"/>
