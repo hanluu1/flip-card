@@ -7,7 +7,7 @@ const App = () => {
   return (
     <div className="App">
       <div className="header">
-        <img src="src/assets/icon.webp" alt="icon" width={150} height={150} />
+        <img src="src/assets/icon.webp" alt="icon" width={200} height={200} />
         <h1>Hi Future Developers!!</h1>
       </div>
       

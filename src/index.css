@@ -2,12 +2,11 @@
   display: flex;
   align-items: center;
   flex-direction: row;
-  gap: 10px;
 }
 
 h1 {
   color: white;
-  font-size: 54px;
+  font-size: 5rem
 }
 
 h3 {
@@ -30,7 +29,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 600px; /* Fixed width */
+  width: 700px; /* Fixed width */
   height: 300px; /* Fixed height */
   perspective: 1000px;
   position: relative;
@@ -55,12 +54,12 @@ p {
 }
 
 .card-front {
-  background-color:#a8a8a8;
+  background-color:rgba(178, 187, 167, 0.26);
   color: black;
 }
 
 .card-back {
-  background-color:#a8a8a8;
+  background-color:rgba(83, 223, 104, 0.29);
   transform: rotateY(180deg);
   color: white;
 }
