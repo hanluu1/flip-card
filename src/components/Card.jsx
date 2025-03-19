@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import stringSimilarity from "string-similarity"
 const Card = ({ cardsData }) => {
   const [currentCard, setCurrentCard] = useState(0);
   const [flipped, setFlipped] = useState(false);
@@ -24,7 +25,13 @@ const Card = ({ cardsData }) => {
   };
 
   const handleSubmit = () => {
-    if (userAnswer.toLowerCase() === cardsData[currentCard].backContent.toLowerCase()) {
+    const similarity = stringSimilarity.compareTwoStrings(userAnswer.toLowerCase(), cardsData[currentCard].backContent.toLowerCase());
+    const userAnswerFirstChar = userAnswer.trim().charAt(0).toLowerCase();
+    const targetAnswerFirstChar = cardsData[currentCard].backContent.trim().charAt(0).toLowerCase();
+    if (userAnswerFirstChar === targetAnswerFirstChar){
+      setFeedback("Correct! ✅")
+    }
+    else if (similarity > 0.5) {
       setFeedback("Correct! ✅ ");
     } else {
       setFeedback("Incorrect, try again or click to flip card! 🔄 😊");

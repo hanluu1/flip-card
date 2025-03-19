@@ -23,5 +23,10 @@ The following **required** functionality for version 2 is completed:
 - [x] **A next button is displayed on the card and can be used to navigate to the next card in a set sequence**
 ## Video Walkthrough
 
+## Stretch features:
+- [x] A shuffle button can be used to randomize the order of the cards
+- [x] A user’s answer may be counted as correct even when it is slightly different from the target answer
+
+
 Here's a walkthrough of implemented required features:
 <img src="public/ver2flash.gif" title="walk through" width=500 alt="video walk through"/>

@@ -1,75 +1,74 @@
 {
-    "questions": [
-      {
-        "frontContent": "Which JavaScript framework is currently the most widely used for building modern web applications?",
-        "options": ["Vue.js", "React", "Angular", "Svelte"],
-        "backContent": "React"
-      },
-      {
-        "frontContent": "What is the name of the popular utility-first CSS framework that simplifies styling web applications?",
-        "options": ["Bootstrap", "Bulma", "Tailwind CSS", "Foundation"],
-        "backContent": "Tailwind CSS"
-      },
-      {
-        "frontContent": "What does the Largest Contentful Paint (LCP) metric measure in web performance?",
-        "options": [
-          "The time it takes for the first byte to be received",
-          "The time it takes for the largest visible element to render",
-          "The time it takes for JavaScript to fully load",
-          "The time it takes for all images to be downloaded"
-        ],
-        "backContent": "The time it takes for the largest visible element to render"
-      },
-      {
-        "frontContent": "What is the standard Git workflow when working on a new feature in a collaborative project?",
-        "options": [
-          "Work directly on the main branch",
-          "Create a new branch, commit changes, push, and create a Pull Request",
-          "Make changes and push directly without review",
-          "Use FTP to upload code manually"
-        ],
-        "backContent": "Create a new branch, commit changes, push, and create a Pull Request"
-      },
-      {
-        "frontContent": "Which backend runtime is commonly used with React and modern JavaScript applications?",
-        "options": ["PHP", "Python", "Node.js", "Ruby on Rails"],
-        "backContent": "Node.js"
-      },
-      {
-        "frontContent": "Which of the following is a modern ES6+ JavaScript feature?",
-        "options": ["var keyword", "Promises and async/await", "jQuery functions", "XMLHTTPRequest"],
-        "backContent": "Promises and async/await"
-      },
-      {
-        "frontContent": "What is the main purpose of Content Security Policy (CSP) in web security?",
-        "options": [
-          "Prevent SQL injections",
-          "Block malware from downloading files",
-          "Prevent cross-site scripting (XSS) attacks",
-          "Encrypt all API requests"
-        ],
-        "backContent": "Prevent cross-site scripting (XSS) attacks"
-      },
-      {
-        "frontContent": "What is the recommended way to improve loading speed in React applications?",
-        "options": [
-          "Use server-side rendering (SSR) or static site generation (SSG)",
-          "Load all JavaScript files at once",
-          "Disable caching",
-          "Use larger images for better quality"
-        ],
-        "backContent": "Use server-side rendering (SSR) or static site generation (SSG)"
-      },
-      {
-        "frontContent": "What database is commonly used in full-stack JavaScript applications?",
-        "options": ["MySQL", "PostgreSQL", "MongoDB", "Oracle"],
-        "backContent": "MongoDB"
-      },
-      {
-        "frontContent": "Which of these frontend technologies is gaining popularity for state management in React?",
-        "options": ["Redux", "MobX", "Zustand", "React Query"],
-        "backContent": "React Query"
-      }
-    ]
-  }
-  
+  "questions": [
+    {
+      "frontContent": "Which JavaScript framework is currently the most widely used for building modern web applications?",
+      "options": ["a. Vue.js", "b. React", "c. Angular", "d. Svelte"],
+      "backContent": "b. React"
+    },
+    {
+      "frontContent": "What is the name of the popular utility-first CSS framework that simplifies styling web applications?",
+      "options": ["a. Bootstrap", "b. Bulma", "c. Tailwind CSS", "d. Foundation"],
+      "backContent": "c. Tailwind CSS"
+    },
+    {
+      "frontContent": "What does the Largest Contentful Paint (LCP) metric measure in web performance?",
+      "options": [
+        "a. The time it takes for the first byte to be received",
+        "b. The time it takes for the largest visible element to render",
+        "c. The time it takes for JavaScript to fully load",
+        "d. The time it takes for all images to be downloaded"
+      ],
+      "backContent": "b. The time it takes for the largest visible element to render"
+    },
+    {
+      "frontContent": "What is the standard Git workflow when working on a new feature in a collaborative project?",
+      "options": [
+        "a. Work directly on the main branch",
+        "b. Create a new branch, commit changes, push, and create a Pull Request",
+        "c. Make changes and push directly without review",
+        "d. Use FTP to upload code manually"
+      ],
+      "backContent": "b. Create a new branch, commit changes, push, and create a Pull Request"
+    },
+    {
+      "frontContent": "Which backend runtime is commonly used with React and modern JavaScript applications?",
+      "options": ["a. PHP", "b. Python", "c. Node.js", "d. Ruby on Rails"],
+      "backContent": "c. Node.js"
+    },
+    {
+      "frontContent": "Which of the following is a modern ES6+ JavaScript feature?",
+      "options": ["a. var keyword", "b. Promises and async/await", "c. jQuery functions", "d. XMLHTTPRequest"],
+      "backContent": "b. Promises and async/await"
+    },
+    {
+      "frontContent": "What is the main purpose of Content Security Policy (CSP) in web security?",
+      "options": [
+        "a. Prevent SQL injections",
+        "b. Block malware from downloading files",
+        "c. Prevent cross-site scripting (XSS) attacks",
+        "d. Encrypt all API requests"
+      ],
+      "backContent": "c. Prevent cross-site scripting (XSS) attacks"
+    },
+    {
+      "frontContent": "What is the recommended way to improve loading speed in React applications?",
+      "options": [
+        "a. Use server-side rendering (SSR) or static site generation (SSG)",
+        "b. Load all JavaScript files at once",
+        "c. Disable caching",
+        "d. Use larger images for better quality"
+      ],
+      "backContent": "a. Use server-side rendering (SSR) or static site generation (SSG)"
+    },
+    {
+      "frontContent": "What database is commonly used in full-stack JavaScript applications?",
+      "options": ["a. MySQL", "b. PostgreSQL", "c. MongoDB", "d. Oracle"],
+      "backContent": "c. MongoDB"
+    },
+    {
+      "frontContent": "Which of these frontend technologies is gaining popularity for state management in React?",
+      "options": ["a. Redux", "b. MobX", "c. Zustand", "d. React Query"],
+      "backContent": "d. React Query"
+    }
+  ]
+}
