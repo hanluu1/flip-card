@@ -5,15 +5,25 @@ const Card = ({ cardsData }) => {
   const [flipped, setFlipped] = useState(false);
   const [userAnswer, setUserAnswer] = useState("");
   const [feedback, setFeedback] = useState("");
+  const [currentStreak, setCurrentStreak] = useState(0);
+  const [longestStreak, setLongestStreak] = useState(0);
+  const [submitted, setSubmitted] = useState(false);
+  const [warning, setWarning] = useState("");
 
   const handleClick = () => {
-    setFlipped(!flipped);
+    if (submitted){
+    setFlipped(!flipped);}
+    else {
+      setWarning('Try again after submitting your answer!!');
+    }
   };
 
   const handleNext = () => {
     setFlipped(false);
     setFeedback("");
     setUserAnswer("");
+    setWarning("");
+    setSubmitted(false);
     setCurrentCard((prevCard) => (prevCard + 1) % cardsData.length);
   };
 
@@ -21,6 +31,8 @@ const Card = ({ cardsData }) => {
     setFlipped(false);
     setFeedback("");
     setUserAnswer("");
+    setWarning("");
+    setSubmitted(false);
     setCurrentCard((prevCard) => (prevCard - 1 + cardsData.length) % cardsData.length);
   };
 
@@ -28,14 +40,23 @@ const Card = ({ cardsData }) => {
     const similarity = stringSimilarity.compareTwoStrings(userAnswer.toLowerCase(), cardsData[currentCard].backContent.toLowerCase());
     const userAnswerFirstChar = userAnswer.trim().charAt(0).toLowerCase();
     const targetAnswerFirstChar = cardsData[currentCard].backContent.trim().charAt(0).toLowerCase();
-    if (userAnswerFirstChar === targetAnswerFirstChar){
+    if (userAnswerFirstChar === targetAnswerFirstChar || similarity > 0.5){
       setFeedback("Correct! ✅")
+      setCurrentStreak((prevStreak) => {
+        const newStreak = prevStreak + 1;
+        if (newStreak > longestStreak) {
+          setLongestStreak(newStreak);
+        }
+        return newStreak;
+      })
+      
     }
-    else if (similarity > 0.5) {
-      setFeedback("Correct! ✅ ");
-    } else {
+    else {
       setFeedback("Incorrect, try again or click to flip card! 🔄 😊");
+      setCurrentStreak(0);
     }
+    setSubmitted(true);
+    setWarning("");
   };
   const handleShuffle = () => {
     setFlipped(false);
@@ -49,6 +70,8 @@ const Card = ({ cardsData }) => {
   return (
     <div>
       <h4>Number of Cards: {cardsData.length}</h4>
+      <h4> Current Streak: {currentStreak}, Longest Streak: {longestStreak} </h4>
+      
       <div className={`card ${flipped ? "flipped" : ""}`} onClick={handleClick}>
         <div className="card-front">
           <p>{cardsData[currentCard].frontContent}</p>
@@ -59,13 +82,17 @@ const Card = ({ cardsData }) => {
         {flipped && <div className="card-back">{cardsData[currentCard].backContent}</div>}
       </div>
       <h4>{feedback}</h4>
-     
+      
+      {warning && <div className="warning">{warning}</div>}
+
       <div className="input-container">
         <input
           type="text"
           placeholder="Enter your answer"
           value={userAnswer}
-          onChange={(e) => setUserAnswer(e.target.value)}
+          onChange={(e) => {setUserAnswer(e.target.value)
+            setWarning("");
+          }}
         />
         <button onClick={handleSubmit}>Submit</button>
           

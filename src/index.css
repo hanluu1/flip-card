@@ -56,12 +56,14 @@ p {
 .card-front {
   background-color:rgba(178, 187, 167, 0.26);
   color: black;
+  cursor: pointer;
 }
 
 .card-back {
   background-color:rgba(83, 223, 104, 0.29);
   transform: rotateY(180deg);
   color: white;
+  cursor: pointer;
 }
 
 .card.flipped .card-front {
@@ -114,4 +116,13 @@ input {
   border-radius: 5px;
   font-size: 16px;
   text-align: center;
+}
+.warning {
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: rgba(255, 50, 50, 0.9);
+  border-radius: 5px;
+  padding: 5px 10px;
 }
