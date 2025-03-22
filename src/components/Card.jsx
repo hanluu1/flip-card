@@ -9,6 +9,10 @@ const Card = ({ cardsData }) => {
   const [longestStreak, setLongestStreak] = useState(0);
   const [submitted, setSubmitted] = useState(false);
   const [warning, setWarning] = useState("");
+  const [masteredCards, setMasteredCards] = useState([]);
+
+  const activeCards= cardsData.filter((card)  => !masteredCards.includes(card.frontContent));
+  if (activeCards.length === 0) return <p>🎉 You've mastered all the cards! 🎉</p>;
 
   const handleClick = () => {
     if (submitted){
@@ -54,7 +58,7 @@ const Card = ({ cardsData }) => {
     else {
       setFeedback("Incorrect, try again or click to flip card! 🔄 😊");
       setCurrentStreak(0);
-    }
+    } 
     setSubmitted(true);
     setWarning("");
   };
@@ -66,6 +70,17 @@ const Card = ({ cardsData }) => {
   };
   if (!cardsData || cardsData.length === 0) return <p>No cards to display</p>;
   const currentOptions = cardsData[currentCard].options || [];
+  
+  const handleMastered = () => {
+    setMasteredCards([...masteredCards, activeCards[currentCard].frontContent]);
+    setSubmitted(false);
+    setFlipped(false);
+    setFeedback("");
+
+    if (activeCards.length > 1) {
+      setCurrentCard((prevCard) => (prevCard + 1) % activeCards.length);
+    }
+  }
 
   return (
     <div>
@@ -97,6 +112,11 @@ const Card = ({ cardsData }) => {
         <button onClick={handleSubmit}>Submit</button>
           
       </div>
+      <button onClick={handleMastered} disabled={!submitted}>
+        Mark as Mastered ✅
+      </button>
+
+      
     
       <div className="buttons">
         <button onClick={handlePrev}>Previous</button>
@@ -107,6 +127,7 @@ const Card = ({ cardsData }) => {
         </div>
         <button onClick={handleNext}>Next</button>
       </div>
+      
     </div>
   );
 };
